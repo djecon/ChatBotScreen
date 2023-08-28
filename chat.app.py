@@ -5,7 +5,7 @@ def query(payload):
     response = requests.post(API_URL, json=payload)
     return response.json()
 
-API_URL = "https://naturaladabas.onrender.com/api/v1/prediction/58c984c3-827e-4fd8-8c63-b9ee284df135"
+API_URL = "http://ec2-3-83-217-17.compute-1.amazonaws.com:3000/api/v1/prediction/6ce36d53-ed90-4759-877b-83aedadb617b"
 # API_URL = "http://localhost:3000/api/v1/prediction/575f6659-23eb-4ccb-885c-d2d3632fb976"
 st.title("Natural & Adabas Chatbot")
 
