@@ -45,5 +45,5 @@ if not is_valid_time():
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
 else:
-    st.error("Sorry, this feature is only available between 8am and 8pm Pacific")
+    st.error("Sorry, this feature is only available between 8am and 5pm Pacific")
 
