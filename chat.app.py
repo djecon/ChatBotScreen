@@ -17,6 +17,11 @@ API_URL = "http://44.206.234.21:3000/api/v1/prediction/6ce36d53-ed90-4759-877b-8
 # API_URL = "http://localhost:3000/api/v1/prediction/575f6659-23eb-4ccb-885c-d2d3632fb976"
 
 logo_image = 'an-2050-light-horizontal-logo.png'
+favicon_html = """
+<link rel="shortcut icon" type="image/x-icon" href="an-2050-dark-circle-logo-favicon.png">
+"""
+st.markdown(favicon_html, unsafe_allow_html=True)
+
 st.image(logo_image)
 st.title("Chatbot")
 st.text("Based on 29 PDF guides. This app is only available between 8am to 5pm Pacific")
