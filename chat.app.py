@@ -3,7 +3,7 @@ import requests
 import datetime
 import pytz
 
-iconimage = 'an-2050-light-horizontal-logo.png'
+iconimage = 'an-2050-dark-circle-logo-favicon.png'
 st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage)
 
 def query(payload):
