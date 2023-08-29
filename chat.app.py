@@ -3,6 +3,9 @@ import requests
 import datetime
 import pytz
 
+iconimage = 'an-2050-light-horizontal-logo.png'
+st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage)
+
 def query(payload):
     response = requests.post(API_URL, json=payload)
     return response.json()
