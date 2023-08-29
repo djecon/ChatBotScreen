@@ -8,7 +8,7 @@ def query(payload):
     return response.json()
 
 def is_valid_time():
-    eastern = pytz.timezone('US/Pacific')
+    pacific = pytz.timezone('US/Pacific')
     current_time = datetime.datetime.now(pacific).time()
     print(current_time)
     return current_time < datetime.time(8, 0) or current_time >= datetime.time(17, 0)
@@ -45,5 +45,5 @@ if not is_valid_time():
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
 else:
-    st.error("Sorry, this feature is only available between 8am and 8pm Eastern Standard Time.")
+    st.error("Sorry, this feature is only available between 8am and 8pm Pacific")
 
