@@ -4,7 +4,13 @@ import datetime
 import pytz
 
 iconimage = 'an-2050-dark-circle-logo-favicon.png'
-st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage)
+st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage,
+                  menu_items={
+        'Documentation': 'https://documentation.softwareag.com/natural/nat921mf/webhelp/natmf-webhelp/overview.htm',
+        'About': "# This is an *extremely* cool app!"
+    }
+                  
+                  )
 
 def query(payload):
     response = requests.post(API_URL, json=payload)
