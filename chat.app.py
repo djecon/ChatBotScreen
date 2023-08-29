@@ -19,7 +19,7 @@ API_URL = "http://44.206.234.21:3000/api/v1/prediction/6ce36d53-ed90-4759-877b-8
 logo_image = 'an-2050+light-horizontal-logo.svg'
 st.image(logo_image)
 st.title("Natural & Adabas Chatbot")
-st.text("Based on 29 PDF guides. This app is only available between 8am - 5pm Pacific")
+st.text("Based on 29 PDF guides. This app is only available between 8am to 5pm Pacific")
 
 if not is_valid_time():
     # Initialize chat history
