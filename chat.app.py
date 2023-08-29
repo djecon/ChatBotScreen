@@ -8,15 +8,15 @@ def query(payload):
     return response.json()
 
 def is_valid_time():
-    eastern = pytz.timezone('US/Eastern')
-    current_time = datetime.datetime.now(eastern).time()
+    eastern = pytz.timezone('US/Pacific')
+    current_time = datetime.datetime.now(pacific).time()
     print(current_time)
-    return current_time < datetime.time(8, 0) or current_time >= datetime.time(20, 0)
+    return current_time < datetime.time(8, 0) or current_time >= datetime.time(17, 0)
 
 API_URL = "http://ec2-3-83-217-17.compute-1.amazonaws.com:3000/api/v1/prediction/6ce36d53-ed90-4759-877b-83aedadb617b"
 # API_URL = "http://localhost:3000/api/v1/prediction/575f6659-23eb-4ccb-885c-d2d3632fb976"
 st.title("Natural & Adabas Chatbot")
-st.text("Based on 29 PDF guides. This app is only available between 8am - 8pm Eastern")
+st.text("Based on 29 PDF guides. This app is only available between 8am - 5pm Pacific")
 
 if not is_valid_time():
     # Initialize chat history
