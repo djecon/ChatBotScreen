@@ -24,7 +24,6 @@ favicon_html = """
 <link rel="shortcut icon" type="image/x-icon" href="an-2050-dark-circle-logo-favicon.png">
 """
 st.markdown(favicon_html, unsafe_allow_html=True)
-
 st.image(logo_image)
 st.title("Chatbot")
 st.text("Based on 29 PDF guides. This app is only available between 8am to 5pm Pacific")
