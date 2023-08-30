@@ -26,7 +26,7 @@ favicon_html = """
 st.markdown(favicon_html, unsafe_allow_html=True)
 st.image(logo_image)
 st.title("Chatbot")
-st.text("Based on 29 PDF guides. This app is only available between 8am to 5pm Pacific")
+st.text("Based on 45 PDF guides. This app is only available between 8am to 5pm Pacific")
 
 if not is_valid_time():
     # Initialize chat history
