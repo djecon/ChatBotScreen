@@ -39,7 +39,7 @@ if not is_valid_time():
             st.markdown(message["content"])
 
     # React to user input
-    if prompt := st.chat_input("What is your question about Natural & Adabas?"):
+    if prompt := st.chat_input("Ask a question about Natural & Adabas"):
         # Display user message in chat message container
         st.chat_message("user").markdown(prompt)
         # Add user message to chat history
