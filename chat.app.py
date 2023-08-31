@@ -14,7 +14,7 @@ def is_valid_time():
     pacific = pytz.timezone('US/Pacific')
     current_time = datetime.datetime.now(pacific).time()
     print(current_time)
-    return current_time < datetime.time(8, 0) or current_time >= datetime.time(17, 0)
+    return current_time < datetime.time(5, 0) or current_time >= datetime.time(17, 0)
 
 API_URL = "http://107.23.95.203:3000/api/v1/prediction/6ce36d53-ed90-4759-877b-83aedadb617b"
 # API_URL = "http://localhost:3000/api/v1/prediction/575f6659-23eb-4ccb-885c-d2d3632fb976"
