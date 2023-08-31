@@ -12,7 +12,7 @@ c = conn.cursor()
 c.execute('SELECT COUNT(*) FROM querytable')
 querycount = c.fetchone()[0]
 with st.sidebar:
-    st.sidebar.subheader("Count")
+    st.sidebar.subheader("Question Count")
     st.sidebar.write(querycount)
 
 def create_querytable():
