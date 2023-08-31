@@ -27,9 +27,7 @@ st.markdown(favicon_html, unsafe_allow_html=True)
 st.image(logo_image)
 st.title("Chatbot")
 st.text("Based on 49 PDF guides. This app is only available between 8am - 5pm Pacific")
-st.text("The following information is provided by an AI-powered system and should be used for informational purposes only. 
-        While the system strives to provide accurate and relevant responses, it may not always reflect human expertise or account 
-        for specific contexts. Users are advised to verify the information independently and consult with domain experts if needed.")
+st.text("The following information is provided by an AI-powered system and should be used for informational purposes only. While the system strives to provide accurate and relevant responses, it may not always reflect human expertise or account for specific contexts. Users are advised to verify the information independently and consult with domain experts if needed.")
 
 if not is_valid_time():
     # Initialize chat history
