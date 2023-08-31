@@ -9,6 +9,11 @@ st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage)
 
 conn = sqlite3.connect('querytable.db')
 c = conn.cursor()
+c.execute('SELECT COUNT(*) FROM querytable')
+querycount = c.fetchone()[0]
+with st.sidebar:
+    st.sidebar.subheader("Count")
+    st.sidebar.write(querycount)
 
 def create_querytable():
     c.execute('CREATE TABLE IF NOT EXISTS querytable(query TEXT,response TEXT, timestamp TEXT)')
@@ -75,6 +80,7 @@ if not is_valid_time():
         st.session_state.messages.append({"role": "assistant", "content": response})
         # Store audit trail
         add_query(prompt, response)
+        querycount += 1
 
 else:
     st.error("Sorry, this feature is only available between 8am and 5pm Pacific")
