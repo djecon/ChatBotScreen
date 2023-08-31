@@ -5,8 +5,7 @@ import pytz
 import sqlite3
 
 iconimage = 'an-2050-dark-circle-logo-favicon.png'
-st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage)
-st.set_page_config(initial_sidebar_state="collapsed") 
+st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage, initial_sidebar_state="collapsed")
 conn = sqlite3.connect('querytable.db')
 c = conn.cursor()
 c.execute('SELECT COUNT(*) FROM querytable')
