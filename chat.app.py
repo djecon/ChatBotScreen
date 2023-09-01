@@ -8,11 +8,6 @@ pc_api = st.secrets["PINECONE_API"]
 
 iconimage = 'an-2050-dark-circle-logo-favicon.png'
 st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage, initial_sidebar_state="collapsed")
-create_querytable()
-conn = sqlite3.connect('querytable.db')
-c = conn.cursor()
-c.execute('SELECT COUNT(*) FROM querytable')
-querycount = c.fetchone()[0]
 
 st.markdown(""" <style>
 #MainMenu {visibility: hidden;}
@@ -56,10 +51,13 @@ def is_valid_time():
     
 API_URL = "http://54.210.93.155:3000/api/v1/prediction/6ce36d53-ed90-4759-877b-83aedadb617b"
 logo_image = 'an-2050-light-horizontal-logo.png'
-#favicon_html = """
-# <link rel="shortcut icon" type="image/x-icon" href="an-2050-dark-circle-logo-favicon.png">
-# """
-# st.markdown(favicon_html, unsafe_allow_html=True)
+
+create_querytable()
+conn = sqlite3.connect('querytable.db')
+c = conn.cursor()
+c.execute('SELECT COUNT(*) FROM querytable')
+querycount = c.fetchone()[0]
+
 st.image(logo_image)
 st.title("Chatbot")
 st.text("Based on 67 PDF guides. This app is only available between 8am - 5pm Pacific")
