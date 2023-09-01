@@ -4,6 +4,8 @@ import datetime
 import pytz
 import sqlite3
 
+pc_api = st.secrets["PINECONE_API"]
+
 iconimage = 'an-2050-dark-circle-logo-favicon.png'
 st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage, initial_sidebar_state="collapsed")
 conn = sqlite3.connect('querytable.db')
@@ -16,14 +18,14 @@ st.markdown(""" <style>
 footer {visibility: hidden;}
 </style> """, unsafe_allow_html=True)
 
-padding = 0
-st.markdown(f""" <style>
-    .reportview-container .main .block-container{{
-        padding-top: {padding}rem;
-        padding-right: {padding}rem;
-        padding-left: {padding}rem;
-        padding-bottom: {padding}rem;
-    }} </style> """, unsafe_allow_html=True)
+# padding = 0
+#  st.markdown(f""" <style>
+#    .reportview-container .main .block-container{{
+#        padding-top: {padding}rem;
+#        padding-right: {padding}rem;
+#        padding-left: {padding}rem;
+#        padding-bottom: {padding}rem;
+#    }} </style> """, unsafe_allow_html=True)
 
 
 with st.sidebar:
