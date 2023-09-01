@@ -3,8 +3,14 @@ import requests
 import datetime
 import pytz
 import sqlite3
+import pinecone
 
 pc_api = st.secrets["PINECONE_API"]
+pinecone.init(api_key=pc_key, environment='gcp-starter')
+index = pinecone.Index('natural')
+index_stats_response = index.describe_index_stats()
+vector_count = index_stats_response['total_vector_count']
+
 conn = sqlite3.connect('querytable.db')
 c = conn.cursor()
 iconimage = 'an-2050-dark-circle-logo-favicon.png'
@@ -54,8 +60,8 @@ c.execute('SELECT COUNT(*) FROM querytable')
 querycount = c.fetchone()[0]
 
 with st.sidebar:
-    st.sidebar.subheader("Question Count")
-    st.sidebar.write(querycount)
+    st.sidebar.write("Question Count", querycount)
+    st.sidebar.write("Vector Count:' vector_count)
 
 st.image(logo_image)
 st.title("Chatbot")
