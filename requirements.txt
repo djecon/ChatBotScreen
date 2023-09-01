@@ -1,1 +1,1 @@
-pinecone
+pinecone==2.2.2
