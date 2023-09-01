@@ -5,7 +5,8 @@ import pytz
 import sqlite3
 
 pc_api = st.secrets["PINECONE_API"]
-
+conn = sqlite3.connect('querytable.db')
+c = conn.cursor()
 iconimage = 'an-2050-dark-circle-logo-favicon.png'
 st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage, initial_sidebar_state="collapsed")
 
@@ -48,8 +49,7 @@ API_URL = "http://54.210.93.155:3000/api/v1/prediction/6ce36d53-ed90-4759-877b-8
 logo_image = 'an-2050-light-horizontal-logo.png'
 
 create_querytable()
-conn = sqlite3.connect('querytable.db')
-c = conn.cursor()
+
 c.execute('SELECT COUNT(*) FROM querytable')
 querycount = c.fetchone()[0]
 
