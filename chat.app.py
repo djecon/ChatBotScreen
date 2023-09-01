@@ -10,6 +10,13 @@ conn = sqlite3.connect('querytable.db')
 c = conn.cursor()
 c.execute('SELECT COUNT(*) FROM querytable')
 querycount = c.fetchone()[0]
+
+st.markdown(""" <style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style> """, unsafe_allow_html=True)
+
+
 with st.sidebar:
     st.sidebar.subheader("Question Count")
     st.sidebar.write(querycount)
