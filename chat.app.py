@@ -8,6 +8,7 @@ pc_api = st.secrets["PINECONE_API"]
 
 iconimage = 'an-2050-dark-circle-logo-favicon.png'
 st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage, initial_sidebar_state="collapsed")
+create_querytable()
 conn = sqlite3.connect('querytable.db')
 c = conn.cursor()
 c.execute('SELECT COUNT(*) FROM querytable')
