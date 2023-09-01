@@ -35,8 +35,6 @@ def is_valid_time():
     print(current_time)
     return current_time < datetime.time(5, 0) or current_time >= datetime.time(17, 0)
 
-
-API_URL = "http://54.210.93.155:3000/api/v1/prediction/6ce36d53-ed90-4759-877b-83aedadb617b"
 # API_URL = "http://localhost:3000/api/v1/prediction/575f6659-23eb-4ccb-885c-d2d3632fb976"
 
 logo_image = 'an-2050-light-horizontal-logo.png'
@@ -46,7 +44,7 @@ logo_image = 'an-2050-light-horizontal-logo.png'
 # st.markdown(favicon_html, unsafe_allow_html=True)
 st.image(logo_image)
 st.title("Chatbot")
-st.text("Based on 55 PDF guides. This app is only available between 8am - 5pm Pacific")
+st.text("Based on 67 PDF guides. This app is only available between 8am - 5pm Pacific")
 st.text(
     "The following information is provided by an AI-powered system and should be used for informational purposes only. While the system strives to provide accurate and relevant responses, it may not always reflect human expertise or account for specific contexts. Users are advised to verify the information independently and consult with domain experts if needed.")
 
