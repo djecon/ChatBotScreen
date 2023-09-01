@@ -23,11 +23,6 @@ footer {visibility: hidden;}
 #        padding-bottom: {padding}rem;
 #    }} </style> """, unsafe_allow_html=True)
 
-
-with st.sidebar:
-    st.sidebar.subheader("Question Count")
-    st.sidebar.write(querycount)
-
 def create_querytable():
     c.execute('CREATE TABLE IF NOT EXISTS querytable(query TEXT,response TEXT, timestamp TEXT)')
 
@@ -57,6 +52,10 @@ conn = sqlite3.connect('querytable.db')
 c = conn.cursor()
 c.execute('SELECT COUNT(*) FROM querytable')
 querycount = c.fetchone()[0]
+
+with st.sidebar:
+    st.sidebar.subheader("Question Count")
+    st.sidebar.write(querycount)
 
 st.image(logo_image)
 st.title("Chatbot")
