@@ -61,7 +61,7 @@ if not is_valid_time():
     # React to user input
     if prompt := st.chat_input("Ask a question about Natural & Adabas"):
         # Display user message in chat message container
-        st.chat_message("user", avatar=an-2050-dark-circle-logo-favicon.png).markdown(prompt)
+        st.chat_message("user").markdown(prompt)
         # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
 
