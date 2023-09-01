@@ -3,7 +3,7 @@ import requests
 import datetime
 import pytz
 import sqlite3
-import pinecone
+# import pinecone
 
 pc_api = st.secrets["PINECONE_API"]
 # pinecone.init(api_key=pc_key, environment='gcp-starter')
