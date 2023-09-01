@@ -61,7 +61,7 @@ querycount = c.fetchone()[0]
 
 with st.sidebar:
     st.sidebar.write("Question Count", querycount)
-    st.sidebar.write("Vector Count:' vector_count)
+    st.sidebar.write("Vector Count:" vector_count)
 
 st.image(logo_image)
 st.title("Chatbot")
