@@ -61,11 +61,11 @@ querycount = c.fetchone()[0]
 
 with st.sidebar:
     st.sidebar.write("Question Count", querycount)
-    st.sidebar.write("Vector Count:", 32819)
+    st.sidebar.write("Vector Count:", 34671)
 
 st.image(logo_image)
 st.title("Chatbot")
-st.text("Based on 67 PDF guides. This app is only available between 8am - 5pm Pacific")
+st.text("Based on 68 PDF guides. This app is only available between 8am - 5pm Pacific")
 st.text(
     "The following information is provided by an AI-powered system and should be used for informational purposes only. While the system strives to provide accurate and relevant responses, it may not always reflect human expertise or account for specific contexts. Users are advised to verify the information independently and consult with domain experts if needed.")
 
