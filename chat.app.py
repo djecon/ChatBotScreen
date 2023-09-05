@@ -16,10 +16,10 @@ c = conn.cursor()
 iconimage = 'an-2050-dark-circle-logo-favicon.png'
 st.set_page_config(page_title="A&N Chatbot", page_icon=iconimage, initial_sidebar_state="collapsed")
 
-st.markdown(""" <style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style> """, unsafe_allow_html=True)
+#st.markdown(""" <style>
+##MainMenu {visibility: hidden;}
+#footer {visibility: hidden;}
+#</style> """, unsafe_allow_html=True)
 
 # padding = 0
 #  st.markdown(f""" <style>
