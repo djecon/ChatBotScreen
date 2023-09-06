@@ -3,7 +3,6 @@ import requests
 import datetime
 import pytz
 import sqlite3
-# import pinecone
 
 pc_api = st.secrets["PINECONE_API"]
 # pinecone.init(api_key=pc_key, environment='gcp-starter')
@@ -102,4 +101,3 @@ if not is_valid_time():
 
 else:
     st.error("Sorry, this feature is only available between 8am and 5pm Pacific")
-
