@@ -5,10 +5,6 @@ import pytz
 import sqlite3
 
 pc_api = st.secrets["PINECONE_API"]
-# pinecone.init(api_key=pc_key, environment='gcp-starter')
-# index = pinecone.Index('natural')
-# index_stats_response = index.describe_index_stats()
-# vector_count = index_stats_response['total_vector_count']
 
 conn = sqlite3.connect('querytable.db')
 c = conn.cursor()
