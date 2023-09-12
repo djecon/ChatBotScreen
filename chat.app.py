@@ -47,7 +47,7 @@ def is_valid_time():
     return current_time < datetime.time(5, 0) or current_time >= datetime.time(17, 0)
     
 API_URL = "http://54.152.36.65:3000/api/v1/prediction/6ce36d53-ed90-4759-877b-83aedadb617b"
-logo_image = 'an-2050-light-horizontal-logo.png'
+logo_image = 'an-2050-light-horizontal-logo.png'  
 
 create_querytable()
 
